@@ -155,14 +155,6 @@ export default function App() {
               <span className="hidden sm:inline">Exportar ficha completa</span>
               <span className="sm:hidden">Exportar</span>
             </button>
-            
-            <a
-              href="#twin-architecture"
-              className="text-xs font-bold text-white bg-ax-primary hover:bg-ax-primary-hover px-4 py-2.5 rounded-xl flex items-center gap-2 transition-all shadow-sm cursor-pointer active:scale-95"
-            >
-              <Cpu className="w-4 h-4 text-[#E6F2F7]" />
-              <span>Ver planta Twin</span>
-            </a>
           </div>
         </div>
       </header>
