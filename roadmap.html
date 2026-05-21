@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliar - Roadmap de Transformación y Gemelo Digital</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600;750&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Roboto"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+                    },
+                    colors: {
+                        ax: {
+                            primary: '#006084',
+                            'primary-hover': '#00547A',
+                            'primary-pressed': '#00415F',
+                            'primary-soft': '#E5EFF3',
+                            'fg-1': '#0A0F3D',
+                            'fg-2': '#4A5566',
+                            'fg-3': '#6C7878',
+                            'bg-1': '#FFFFFF',
+                            'bg-2': '#F5F6F8',
+                            'bg-3': '#ECEEF1',
+                            'border': '#D8DCE0',
+                            'border-strong': '#B4BDC4',
+                            // Dark Theme
+                            'dark-bg-1': '#0A0F3D',
+                            'dark-bg-2': '#111A52',
+                            'dark-bg-3': '#1B2566',
+                            'dark-fg-1': '#FFFFFF',
+                            'dark-fg-2': '#C7CCE0',
+                            'dark-fg-3': '#8C92AD',
+                            'dark-border': '#2A3270',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #111A52;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A3270;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #006084;
+        }
+        @keyframes PulseRing {
+            0% { transform: scale(0.95); opacity: 0.5; }
+            50% { transform: scale(1.15); opacity: 0.8; }
+            100% { transform: scale(0.95); opacity: 0.5; }
+        }
+        .ring-pulse-custom {
+            animation: PulseRing 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-ax-bg-2 text-ax-fg-1 font-sans selection:bg-ax-primary selection:text-white antialiased">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-ax-border px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="relative p-2.5 bg-ax-primary rounded-xl text-white shadow-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <polygon points="3 6 17 2 21 6 17 10 3 6"></polygon>
+                        <polygon points="3 18 17 14 21 18 17 22 3 18"></polygon>
+                        <polygon points="3 12 17 8 21 12 17 16 3 12"></polygon>
+                    </svg>
+                    <div class="absolute -bottom-1 -right-1 w-3 h-3 bg-[#2E8B57] border-2 border-white rounded-full ring-pulse-custom"></div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-ax-primary bg-ax-primary-soft border border-ax-primary/20 px-2 py-0.5 rounded">
+                            Aliar S.A.
+                        </span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-[#004F77] bg-[#E6F2F7] border border-[#006394]/20 px-2 py-0.5 rounded font-bold">
+                            Asimetrix
+                        </span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-[#006394] bg-[#E6F2F7] border border-[#006394]/20 px-2 py-0.5 rounded font-mono">
+                            UNLOCKING THE POWER OF DATA
+                        </span>
+                    </div>
+                    <h1 class="text-lg md:text-xl font-bold text-ax-fg-1 tracking-tight mt-0.5">
+                        Roadmap de Transformación y Gemelo Digital
+                    </h1>
+                </div>
+            </div>
+            <div class="flex items-center gap-2.5">
+                <button onclick="window.print()" class="text-xs font-bold text-ax-fg-1 bg-white hover:bg-ax-bg-2 border border-ax-border px-4 py-2.5 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-xs active:scale-95">
+                    <svg class="w-4 h-4 text-ax-fg-2" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    <span>Imprimir de Control</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 md:px-6 py-6">
+        
+        <!-- Hero Banner Card -->
+        <div class="mb-6 bg-ax-dark-bg-1 p-6 md:p-8 rounded-xl text-white relative overflow-hidden shadow-sm border border-ax-dark-border">
+            <div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-[#006394]/20 to-transparent pointer-events-none"></div>
+            <div class="absolute -left-10 -top-10 w-40 h-40 bg-[#006394]/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative max-w-3xl z-15">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-ax-primary-soft bg-[#E6F2F7]/10 border border-[#006394]/20 px-3 py-1 rounded-full uppercase tracking-wider mb-4 font-mono">
+                    Proyección Mayo 2026
+                </span>
+                
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
+                    Alineación de Infraestructura y Capacidades Predictivas
+                </h2>
+                <p class="text-xs md:text-sm text-ax-dark-fg-2 mt-2.5 leading-relaxed">
+                    El Gemelo Digital (Digital Twin) de Aliar consolidará 15 hitos de ingeniería de datos, optimización automatizada de gránulos de plantas de secado, dispositivos IoT de silaje de alimentos e inteligencia productiva (Porcicultura & Agro) para garantizar una toma de decisiones predictiva que maximice el margen operativo del negocio de forma medible.
+                </p>
+            </div>
+        </div>
+
+        <!-- Upper Metrics Dashboard Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+            <!-- Percent Card -->
+            <div class="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all hover:shadow-md">
+                <div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+                    <svg class="w-full h-full transform -rotate-90">
+                        <circle cx="28" cy="28" r="24" class="stroke-ax-bg-3" stroke-width="4.5" fill="transparent"/>
+                        <circle cx="28" cy="28" r="24" class="stroke-ax-primary" stroke-width="4.5" fill="transparent" stroke-dasharray="150" stroke-dashoffset="30"/>
+                    </svg>
+                    <div class="absolute font-mono text-[13px] font-bold text-ax-fg-1">80%</div>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-ax-fg-3 uppercase tracking-wider leading-none mb-1">Maturidad</h4>
+                    <p class="text-sm font-bold text-ax-fg-1">12/15 Listos</p>
+                    <span class="text-[9px] text-[#2E8B57] bg-[#E5F2EB] px-1.5 py-0.5 rounded font-medium mt-0.5 inline-block">Fase Avanzada</span>
+                </div>
+            </div>
+
+            <!-- Stage Card -->
+            <div class="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all hover:shadow-md">
+                <div class="p-3 bg-ax-primary-soft text-ax-primary rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+                        <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+                        <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-ax-fg-3 uppercase tracking-wider leading-none mb-1">Fase Actual</h4>
+                    <p class="text-sm font-bold text-ax-fg-1 leading-tight">H-14: Discovery</p>
+                    <p class="text-[10px] text-ax-fg-2 mt-0.5 flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 bg-ax-primary rounded-full inline-block"></span> Mayo 2026
+                    </p>
+                </div>
+            </div>
+
+            <!-- Partners Card -->
+            <div class="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all hover:shadow-md">
+                <div class="p-3 bg-ax-primary-soft text-ax-primary rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-ax-fg-3 uppercase tracking-wider leading-none mb-1">Alianza</h4>
+                    <p class="text-sm font-bold text-ax-fg-1">3 Socios</p>
+                    <p class="text-[10px] text-ax-fg-2 mt-0.5">Aliar • Asimetrix • Premex</p>
+                </div>
+            </div>
+
+            <!-- Lake Status -->
+            <div class="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all hover:shadow-md">
+                <div class="p-3 bg-ax-primary-soft text-ax-primary rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-ax-fg-3 uppercase tracking-wider leading-none mb-1">Lago de Datos</h4>
+                    <p class="text-sm font-bold text-ax-fg-1">+12 Reportes</p>
+                    <p class="text-[10px] text-ax-primary font-medium mt-0.5">SAS, Agriness & IoT</p>
+                </div>
+            </div>
+
+            <!-- Governance Status -->
+            <div class="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all hover:shadow-md">
+                <div class="p-3 bg-[#FBF1D6] text-[#E0A100] rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-ax-fg-3 uppercase tracking-wider leading-none mb-1">Gobernanza</h4>
+                    <p class="text-sm font-bold text-ax-fg-1">Comité Operativo</p>
+                    <span class="text-[9px] text-[#2E8B57] bg-[#E5F2EB] px-1.5 py-0.5 rounded font-medium mt-0.5 inline-block">● Activo y Aprobado</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter and Search Interface Controls -->
+        <div class="bg-white border border-ax-border rounded-xl p-5 mb-8 shadow-xs">
+            <div class="flex flex-col gap-4">
+                <!-- Search & Layout Toggle -->
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                    <div class="relative flex-1 max-w-md">
+                        <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-ax-fg-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input
+                            oninput="filterMilestones()"
+                            id="search-input"
+                            type="text"
+                            placeholder="Buscar hitos, responsables, tecnologías..."
+                            class="w-full text-sm pl-10 pr-10 py-2.5 bg-ax-bg-2 hover:bg-ax-bg-3/50 focus:bg-white rounded-xl border border-ax-border outline-hidden transition-all focus:border-ax-primary focus:ring-1 focus:ring-ax-primary/20 text-ax-fg-1"
+                        >
+                        <button onclick="clearSearch()" class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-ax-fg-3 hover:text-ax-fg-1 bg-ax-bg-3 px-1.5 py-0.5 rounded cursor-pointer">
+                            Limpiar
+                        </button>
+                    </div>
+
+                    <!-- Layout Option Controls -->
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="bg-ax-bg-2 p-1 rounded-xl border border-ax-border flex items-center">
+                            <button onclick="toggleLayout('flow')" id="btn-layout-flow" class="text-xs font-bold px-3.5 py-1.5 rounded-lg transition-all cursor-pointer bg-white text-ax-fg-1 shadow-xs">
+                                Lista de Hitos
+                            </button>
+                            <button onclick="toggleLayout('grid')" id="btn-layout-grid" class="text-xs font-bold px-3.5 py-1.5 rounded-lg transition-all cursor-pointer text-ax-fg-3 hover:text-ax-fg-2">
+                                Vista Bento Grid
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Filters (Q1, Cimientos, IoT, Analitica, Twin) -->
+                <div class="pt-3 border-t border-ax-border">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-xs font-bold text-ax-fg-3 mr-2">Eje de Proyecto:</span>
+                        <button onclick="setCategoryFilter('Todos')" class="category-pill text-xs font-semibold px-3 py-1.5 rounded-full border transition-all cursor-pointer bg-ax-primary text-white border-ax-primary shadow-xs">
+                            Todos (15)
+                        </button>
+                        <button onclick="setCategoryFilter('Cimientos')" class="category-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-ax-border text-ax-fg-2 bg-white hover:bg-ax-bg-2">
+                            Cimientos
+                        </button>
+                        <button onclick="setCategoryFilter('Gobernanza & Datos')" class="category-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-ax-border text-ax-fg-2 bg-white hover:bg-ax-bg-2">
+                            Gobernanza & Datos
+                        </button>
+                        <button onclick="setCategoryFilter('Dispositivos & IoT')" class="category-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-ax-border text-ax-fg-2 bg-white hover:bg-ax-bg-2">
+                            Dispositivos & IoT
+                        </button>
+                        <button onclick="setCategoryFilter('Analítica & Operaciones')" class="category-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-ax-border text-ax-fg-2 bg-white hover:bg-ax-bg-2">
+                            Analítica & Operaciones
+                        </button>
+                        <button onclick="setCategoryFilter('Digital Twin')" class="category-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-ax-border text-ax-fg-2 bg-white hover:bg-ax-bg-2">
+                            Digital Twin
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Status Filters -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-bold text-ax-fg-3 mr-1">Estado de Ejecución:</span>
+                    <button onclick="setStatusFilter('Todos')" class="status-tab text-xs px-3 py-1 rounded-lg border transition-all cursor-pointer bg-ax-fg-1 text-white border-ax-fg-1 font-bold">
+                        Todos
+                    </button>
+                    <button onclick="setStatusFilter('Completado')" class="status-tab text-xs px-3 py-1 rounded-lg border border-ax-border text-ax-fg-2 bg-ax-bg-2 hover:bg-ax-bg-3">
+                        Listo (Completados)
+                    </button>
+                    <button onclick="setStatusFilter('En Ejecución')" class="status-tab text-xs px-3 py-1 rounded-lg border border-ax-border text-ax-fg-2 bg-ax-bg-2 hover:bg-ax-bg-3">
+                        Fase Actual
+                    </button>
+                    <button onclick="setStatusFilter('Pendiente')" class="status-tab text-xs px-3 py-1 rounded-lg border border-ax-border text-ax-fg-2 bg-ax-bg-2 hover:bg-ax-bg-3">
+                        Proyección (Pendiente)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Split Layout Workspace (left: interactive list/grid, right: high-fidelity detailed inspector sidebar) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- Milestones Area (id: active-layout-panel, sizes: scale on grid/list selection) -->
+            <div id="milestones-area" class="lg:col-span-7 flex flex-col gap-4">
+                <!-- HTML Dynamically Injected Milestones of the Roadmap -->
+                <div id="milestone-cards-container" class="grid grid-cols-1 gap-4">
+                    <!-- Cards will be populated by JS -->
+                </div>
+            </div>
+
+            <!-- Inspect Sidebar Panel (Dark Theme Slate layout designed specifically for Executive context) -->
+            <div class="lg:col-span-5 h-full">
+                <div class="sticky top-28 bg-ax-dark-bg-1 text-[#C7CCE0] rounded-xl p-6 shadow-xl border border-ax-dark-border flex flex-col justify-between min-h-[600px]">
+                    <div id="inspector-content">
+                        <!-- Head -->
+                        <div class="flex items-center justify-between gap-4 pb-4 border-b border-ax-dark-border">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-mono text-ax-primary bg-ax-primary-soft border border-ax-primary/20 px-2.5 py-1 rounded font-bold">
+                                    HITOS DE ACCION
+                                </span>
+                                <span class="text-xs text-ax-dark-fg-3 font-medium">Detalle Técnico</span>
+                            </div>
+                            <!-- Simple Navigation inside inspector -->
+                            <div class="flex items-center gap-1.5">
+                                <button onclick="navigateInspector(-1)" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-ax-dark-border hover:bg-ax-dark-bg-2 text-ax-dark-fg-1 cursor-pointer">
+                                    Ant
+                                </button>
+                                <button onclick="navigateInspector(1)" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-ax-dark-border hover:bg-ax-dark-bg-2 text-ax-dark-fg-1 cursor-pointer">
+                                    Sig
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Panel Detail Display Template (Dynamic via JS) -->
+                        <div id="panel-dynamic-body" class="space-y-4 mt-4">
+                            <!-- Dynamic Injection -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Conceptual Schema of the Gemelo Digital (Digital Twin Architecture Segment) -->
+        <section class="mt-12 pt-8 border-t border-ax-border">
+            <div class="bg-white border border-ax-border rounded-xl p-6 shadow-xs mb-8">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-ax-border">
+                    <div>
+                        <span class="text-xs font-bold text-ax-primary bg-ax-primary-soft px-2.5 py-1 rounded-full uppercase tracking-wider">
+                            Arquitectura de Valor
+                        </span>
+                        <h3 class="text-xl font-bold text-ax-fg-1 mt-2">
+                            Estructura de Captura de Valor del Gemelo Digital
+                        </h3>
+                        <p class="text-xs text-ax-fg-2 mt-1">
+                            Visualice cómo los hitos de Aliar convergen desde la base de datos hasta las decisiones predictivas automatizadas en el Gemelo Digital.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    <!-- Layer Architecture diagram stack -->
+                    <div class="lg:col-span-7 flex flex-col gap-3 relative">
+                        <div class="absolute left-6 top-4 bottom-4 w-1 bg-gradient-to-b from-ax-primary-soft via-ax-border to-ax-primary rounded-full z-0 pointer-events-none opacity-40"></div>
+                        
+                        <!-- Layer 1 -->
+                        <div onclick="selectAndScrollToMilestone(13)" class="layer-item z-10 flex gap-4 p-4 border border-ax-border rounded-xl bg-white hover:bg-ax-bg-2 cursor-pointer transition-all">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white flex items-center justify-center border border-ax-border shadow-xs">
+                                <svg class="w-5 h-5 text-ax-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                    <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-xs font-bold text-ax-fg-1">1. Datos Crudos e Infraestructura IoT</h4>
+                                    <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-ax-primary-soft text-ax-primary font-bold">4 Hitos</span>
+                                </div>
+                                <p class="text-[11px] text-ax-fg-2 mt-0.5">Dispositivos de telemetría y sensores en silo (Insylo) y bases de datos iniciales.</p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 2 -->
+                        <div onclick="selectAndScrollToMilestone(3)" class="layer-item z-10 flex gap-4 p-4 border border-ax-border rounded-xl bg-white hover:bg-ax-bg-2 cursor-pointer transition-all">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white flex items-center justify-center border border-ax-border shadow-xs">
+                                <svg class="w-5 h-5 text-ax-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-xs font-bold text-ax-fg-1">2. Ingestión y Data Lake Unificado</h4>
+                                    <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-ax-primary-soft text-ax-primary font-bold">2 Hitos</span>
+                                </div>
+                                <p class="text-[11px] text-ax-fg-2 mt-0.5">Fuentes unificadas en el pipeline de datos (SAP, Agriness, Qlik Cloud) con autorización estratégica.</p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 3 -->
+                        <div onclick="selectAndScrollToMilestone(8)" class="layer-item z-10 flex gap-4 p-4 border border-ax-border rounded-xl bg-white hover:bg-ax-bg-2 cursor-pointer transition-all">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white flex items-center justify-center border border-ax-border shadow-xs">
+                                <svg class="w-5 h-5 text-ax-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-xs font-bold text-ax-fg-1">3. Inteligencia y Modelación Algorítmica</h4>
+                                    <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-ax-primary-soft text-ax-primary font-bold">4 Hitos</span>
+                                </div>
+                                <p class="text-[11px] text-ax-fg-2 mt-0.5">Curvas de crecimiento, detección automatizada de anomalías y optimizador de márgenes OptiMarket.</p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 4 -->
+                        <div onclick="selectAndScrollToMilestone(12)" class="layer-item z-10 flex gap-4 p-4 border border-ax-border rounded-xl bg-white hover:bg-ax-bg-2 cursor-pointer transition-all">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white flex items-center justify-center border border-ax-border shadow-xs">
+                                <svg class="w-5 h-5 text-ax-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-xs font-bold text-ax-fg-1">4. Control Estratégico y Comités</h4>
+                                    <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-ax-primary-soft text-ax-primary font-bold">3 Hitos</span>
+                                </div>
+                                <p class="text-[11px] text-ax-fg-2 mt-0.5">Alineamiento transversal de directores, sanidad basada en evidencia y comités 'Todos Ponen'.</p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 5 -->
+                        <div onclick="selectAndScrollToMilestone(14)" class="layer-item z-10 flex gap-4 p-4 border border-ax-border rounded-xl bg-white hover:bg-ax-bg-2 cursor-pointer transition-all">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white flex items-center justify-center border border-ax-border shadow-xs">
+                                <svg class="w-5 h-5 text-[#2E8B57] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-xs font-bold text-ax-fg-1">5. Gemelo Digital Operativo (Digital Twin)</h4>
+                                    <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-[#E5F2EB] text-[#2E8B57] font-bold">2 Hitos</span>
+                                </div>
+                                <p class="text-[11px] text-ax-fg-2 mt-0.5">Simulaciones y control predictivo en plantas de secados y granjas, optimizando rentabilidad general.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Side details metrics box of the architecture values -->
+                    <div class="lg:col-span-5 bg-ax-bg-2 rounded-xl p-5 border border-ax-border flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-ax-fg-1 uppercase tracking-wider mb-3 font-mono">Palancas de Optimización</h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-ax-border shadow-2xs">
+                                    <div class="flex items-center gap-1.5 mb-1">
+                                        <span class="w-1.5 h-1.5 bg-[#2E8B57] rounded-full"></span>
+                                        <span class="text-xs font-bold text-ax-fg-1">Planta de Secado & Agricultura</span>
+                                    </div>
+                                    <p class="text-[11px] text-ax-fg-2 leading-relaxed">Optimización predictiva de costos térmicos y eléctricos cruzando humedad y gas en Planta de Secado Aliar.</p>
+                                </div>
+
+                                <div class="bg-white p-3 rounded-lg border border-ax-border shadow-2xs">
+                                    <div class="flex items-center gap-1.5 mb-1">
+                                        <span class="w-1.5 h-1.5 bg-ax-primary rounded-full"></span>
+                                        <span class="text-xs font-bold text-ax-fg-1">Silos de Alimento IoT</span>
+                                    </div>
+                                    <p class="text-[11px] text-ax-fg-2 leading-relaxed">Soportado en el piloto Insylo para automatizar el control físico de stock evitando sobredescargas imprevistas.</p>
+                                </div>
+
+                                <div class="bg-white p-3 rounded-lg border border-ax-border shadow-2xs">
+                                    <div class="flex items-center gap-1.5 mb-1">
+                                        <span class="w-1.5 h-1.5 bg-[#E0A100] rounded-full"></span>
+                                        <span class="text-xs font-bold text-ax-fg-1">Bioseguridad y Sanidad</span>
+                                    </div>
+                                    <p class="text-[11px] text-ax-fg-2 leading-relaxed">Cruce estructurado de bacteriologías críticas de laboratorio con el tablero oficial de consumo farmacológico y sanidad.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-ax-border text-center">
+                            <span class="text-[10px] text-ax-fg-3 font-medium">Metodología y Co-Diseño por</span>
+                            <span class="font-bold text-ax-primary bg-ax-primary-soft text-[10px] px-2 py-0.5 rounded border border-ax-border ml-1">
+                                Aliar • Asimetrix • Premex
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ax-dark-bg-1 text-[#C7CCE0] py-12 px-6 border-t border-ax-dark-border mt-16 text-center md:text-left">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-ax-dark-bg-2 rounded-lg text-white">
+                    <svg class="w-5 h-5 text-ax-primary-soft" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-white font-bold text-sm block">Aliar S.A. Digital Twin Roadmap</span>
+                    <p class="text-xs text-[#8C92AD] mt-0.5">Control de Eficiencia térmica, IoT, Sanidad & Gestión Porcícola.</p>
+                </div>
+            </div>
+            <p class="text-xs text-[#8C92AD] font-mono">
+                © 2026 Aliar S.A. • Asimetrix • Premex Allius. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Milestones JSON & JS Core logic -->
+    <script>
+        const MILESTONES = [
+            {
+                id: 1,
+                titulo: "Cimiento y unificación de capacidades",
+                impactoTitulo: "Sinergia Operativa",
+                impactoDetalle: "Unifica el lenguaje técnico y de negocio entre tres compañías distintas (Aliar, Asimetrix y Premex Allius) y establece la línea base de conocimiento para que el proyecto se construya sobre cimientos firmes y garantice la usabilidad futura.",
+                cronologia: "Enero - Febrero 2026",
+                equipo: "15 Personas en total (6 de TIC Aliar, 6 de Asimetrix y 3 de Premex Allius)",
+                esfuerzo: "Más de 6 horas de co-creación",
+                esfuerzoNivel: "Medio",
+                actividadesClave: [
+                    "Realización de talleres de inicio e integración presenciales en Medellín."
+                ],
+                categoria: "Cimientos",
+                estado: "Completado",
+                fase: "Q1 2026"
+            },
+            {
+                id: 2,
+                titulo: "Gobierno de datos y aval estratégico",
+                impactoTitulo: "Desbloqueo legal y operativo",
+                impactoDetalle: "Concede la autorización crítica para interconectar bases de datos confidenciales (Datalakes) y desplegar sensores en campo (Insylo). Sin este hito político-estratégico, el desarrollo tecnológico posterior habría sido inviable.",
+                cronologia: "19 de Marzo de 2026",
+                equipo: "3 Representantes de alta dirección y aliados tecnológicos",
+                esfuerzo: "Más de 4 horas en sesión de gobernanza",
+                esfuerzoNivel: "Alto",
+                actividadesClave: [
+                    "Celebración del comité de alta dirección en Bucaramanga.",
+                    "Definición de lineamientos de seguridad de la información y permisos de integración.",
+                    "Aprobación estratégica para la interconexión de bases de datos."
+                ],
+                categoria: "Gobernanza & Datos",
+                estado: "Completado",
+                fase: "Q1 2026"
+            },
+            {
+                id: 3,
+                titulo: "Construcción de infraestructura digital y lago de datos (Data Lake)",
+                impactoTitulo: "Fuente única y confiable",
+                impactoDetalle: "Construcción de un repositorio unificado para conectar datos de sensores, sistemas operativos y procesos de negocio. Reduce inconsistencias y habilita una base escalable para el Digital Twin, reportes ejecutivos y analítica posterior.",
+                cronologia: "Marzo - Mayo 2026",
+                equipo: "12 Personas en total (6 de TIC Aliar y 6 de Asimetrix)",
+                esfuerzo: "Continuo, promediando de 3 a 5 días por reporte o fuente de información",
+                esfuerzoNivel: "Continuo",
+                actividadesClave: [
+                    "Frente Agriness: Extracción automática de 6 reportes (cría semanal/mensual, fallos, partos/nacimientos, mapa de servicios y preceba) con validación de integridad.",
+                    "Frente SAP: Construcción por parte de Aliar de un Web Service para entregar datos a Asimetrix.",
+                    "Frente Consolidación: Integración de fuentes en el pipeline de datos de Know para alimentar Qlik Cloud (recargas cada 2 horas) y la API REST.",
+                    "Diseño y construcción de tableros de visualización (modelos nuevos con hasta 20 días hábiles de desarrollo)."
+                ],
+                categoria: "Gobernanza & Datos",
+                estado: "Completado",
+                fase: "Q2 2026"
+            },
+            {
+                id: 4,
+                titulo: "Estandarización de indicadores de negocio (Porcicultura & Agro)",
+                impactoTitulo: "Garantía de valor práctico",
+                impactoDetalle: "Traduce la estrategia abstracta en métricas matemáticas del mundo real (Indicadores de Porcicultura PRC y Agro). Blinda al proyecto de construir software costoso que no resuelva los dolores reales del negocio.",
+                cronologia: "Abril 2026",
+                equipo: "4 Integrantes entre líderes operativos y de proyecto",
+                esfuerzo: "10 Horas de diseño y mesas internas",
+                esfuerzoNivel: "Bajo",
+                actividadesClave: [
+                    "Mapeo y definición matemática de variables críticas de negocio.",
+                    "Conducción de mesas técnicas internas de alineación con líderes de terreno."
+                ],
+                categoria: "Cimientos",
+                estado: "Completado",
+                fase: "Q2 2026"
+            },
+            {
+                id: 5,
+                titulo: "Despliegue y mantenimiento de PigVision – granjas de ceba (Sitio 3)",
+                impactoTitulo: "Precisión comercial y operativa",
+                impactoDetalle: "Habilita la validación exacta del peso promedio de los cerdos al momento de salida, sirviendo de soporte clave a comercialización para estimar los kilogramos de carne esperados.",
+                cronologia: "Monitoreo Continuo 2026",
+                equipo: "Equipo líder de cada sitio de producción y soporte técnico Asimetrix",
+                esfuerzo: "Seguimiento quincenal programado",
+                esfuerzoNivel: "Continuo",
+                actividadesClave: [
+                    "Instalación y operación en el 100% de las granjas de Ceba del sitio 3.",
+                    "Revisión de mantenimiento preventivo y correctivo de los equipos PigVision.",
+                    "Análisis quincenal de resultados zootécnicos basados en mediciones de campo."
+                ],
+                categoria: "Dispositivos & IoT",
+                text: "text-[#006084]",
+                estado: "Completado",
+                fase: "Continuo"
+            },
+            {
+                id: 6,
+                titulo: "Implementación del dashboard de curvas de crecimiento",
+                impactoTitulo: "Planeación productiva predictiva",
+                impactoDetalle: "Ofrece una mayor visibilidad del comportamiento de crecimiento del lote para realizar ajustes oportunos de manejo, alimentación y estrategia comercial.",
+                cronologia: "Uso quincenal 2026",
+                equipo: "Equipo técnico de cada sitio y analistas de datos",
+                esfuerzo: "Revisión periódica en comités quincenales",
+                esfuerzoNivel: "Medio",
+                actividadesClave: [
+                    "Procesamiento de la información histórica y actual capturada por PigVision.",
+                    "Despliegue de visualizaciones con proyecciones de peso al finalizar el lote.",
+                    "Contraste y calibración de las curvas proyectadas frente a las mediciones reales en campo."
+                ],
+                categoria: "Analítica & Operaciones",
+                estado: "Completado",
+                fase: "Q1 2026"
+            },
+            {
+                id: 7,
+                titulo: "Distribución del reporte diario de indicadores zootécnicos",
+                impactoTitulo: "Eficiencia en tiempo real",
+                impactoDetalle: "Permite a los gerentes y líderes planificar la operación de salida núcleo por núcleo mediante el envío automatizado de métricas unificadas.",
+                cronologia: "Diario 2026 (Automatizado)",
+                equipo: "Líderes de sitio y destinatarios gerenciales (Wilmer, Daniel, Sergio)",
+                esfuerzo: "Procesamiento algorítmico automatizado diario",
+                esfuerzoNivel: "Automatizado",
+                actividadesClave: [
+                    "Integración diaria de datos: Peso (PigVision) + Mortalidad diaria + Consumo de alimento diario.",
+                    "Generación del reporte por núcleo (Machigure, Barlovento, Gammon Fray, Cascabeles) con KPIs de ganancia animal/día, % mortalidad y conversión alimenticia.",
+                    "Envío de reportes consolidados por núcleos ordenados de mayor a menor edad y exportación general a Excel."
+                ],
+                categoria: "Analítica & Operaciones",
+                estado: "Completado",
+                fase: "Q1 2026"
+            },
+            {
+                id: 8,
+                titulo: "Activación del algoritmo de detección de anomalías",
+                impactoTitulo: "Enfoque preventivo y proactivo",
+                impactoDetalle: "Proporciona una alerta temprana automatizada que mitiga pérdidas financieras al detectar desviaciones antes de que se vuelvan críticas.",
+                cronologia: "Operativo (Ejecución Diaria 2026)",
+                equipo: "Líderes de producción de cada sitio y algoritmos Asimetrix",
+                esfuerzo: "Automatizado (Monitoreo diario)",
+                esfuerzoNivel: "Automatizado",
+                actividadesClave: [
+                    "Procesamiento automático diario de la ganancia animal/día de los últimos 7 días contra los 7 días anteriores.",
+                    "Disparo de alertas automatizadas ante decrecimientos o anomalías a los líderes de producción.",
+                    "Validación en campo de causas raíz (problemas de manejo, consumo de alimento o síntomas clínicos)."
+                ],
+                categoria: "Analítica & Operaciones",
+                estado: "Completado",
+                fase: "Q1 2026"
+            },
+            {
+                id: 9,
+                titulo: "Despliegue y capacitación de OptiMarket",
+                impactoTitulo: "Maximización del margen por lote",
+                impactoDetalle: "Permite planificar el calendario ideal de despachos considerando las limitantes físicas de la granja y el comportamiento real del animal.",
+                cronologia: "Desplegado (Monitoreo Continuo 2026)",
+                equipo: "Líderes de producción (usuarios finales) y de soporte Asimetrix",
+                esfuerzo: "Entrenamiento inicial completado; sesiones programadas.",
+                esfuerzoNivel: "Medio",
+                actividadesClave: [
+                    "Integración del optimizador de peso de salida dentro del portal web de Asimetrix.",
+                    "Parametrización de restricciones: Peso meta, permanencia máxima y ganancia de PigVision.",
+                    "Planificación de los próximos pasos para elevar el uso diario y maximizar el valor de salida de los lotes."
+                ],
+                categoria: "Analítica & Operaciones",
+                estado: "Completado",
+                fase: "Q2 2026"
+            },
+            {
+                id: 10,
+                titulo: "Adopción de Know productivo (Cría, Precebo y Ceba)",
+                impactoTitulo: "Soporte a bonificaciones y desempeño",
+                impactoDetalle: "Sirve como la herramienta oficial muy utilizada por los líderes de sitio para calcular y validar las bonificaciones por granja.",
+                cronologia: "Desplegado (Monitoreo Continuo 2026)",
+                equipo: "Líderes de sitio de cría, precebo, ceba y analistas de datos",
+                esfuerzo: "Variable (Uso intensivo para liquidaciones)",
+                esfuerzoNivel: "Alto",
+                actividadesClave: [
+                    "Consolidación de datos de Agriness y archivos Excel de lotes liquidados.",
+                    "Despliegue de resúmenes de lotes terminados y tendencias comparativas entre sitios.",
+                    "Planificación de desarrollos pendientes para la vista de Cría."
+                ],
+                categoria: "Analítica & Operaciones",
+                estado: "Completado",
+                fase: "Continuo"
+            },
+            {
+                id: 11,
+                titulo: "Implementación de Know de sanidad y bioseguridad",
+                impactoTitulo: "Decisiones médicas basadas en evidencia",
+                impactoDetalle: "Soporta directamente las estrategias de control sanitario. El plan de medicación de Aliar se estructuró con base en la evidencia de costo y resistencia de estos tableros.",
+                cronologia: "Desplegado (Monitoreo Continuo 2026)",
+                equipo: "Equipo de sanidad liderado por Adriana Patiño",
+                esfuerzo: "Monitoreo y actualización continua",
+                esfuerzoNivel: "Continuo",
+                actividadesClave: [
+                    "Mapeo de bioseguridad mediante listas de chequeo con seguimiento histórico.",
+                    "Cruce de bacteriología (resistencia) con el consumo y costos de antibióticos.",
+                    "Integración con datos productivos semanales de cría para medir impactos."
+                ],
+                categoria: "Analítica & Operaciones",
+                estado: "Completado",
+                fase: "Continuo"
+            },
+            {
+                id: 12,
+                titulo: "Consolidación de Know de comité \"Todos Ponen\"",
+                impactoTitulo: "Alineación estratégica transversal",
+                impactoDetalle: "Reúne a directores y líderes en torno al indicador macro del negocio, facilitando la toma de decisiones unificadas entre las áreas productivas, calidad y planta de beneficio.",
+                cronologia: "Desplegado (Monitoreo Continuo 2026)",
+                equipo: "Alta dirección, líderes de calidad, producción y planta de beneficio",
+                esfuerzo: "Revisiones mensuales de comité estratégico",
+                esfuerzoNivel: "Alto",
+                actividadesClave: [
+                    "Centralización de KPIs de cría, precebo, ceba, calidad de Know y OKUO.",
+                    "Integración de datos de planta de beneficio y canales de Alura (% magro y grasa dorsal).",
+                    "Seguimiento sistemático al KPI principal: Kilogramos liquidados por hembra año."
+                ],
+                categoria: "Analítica & Operaciones",
+                estado: "Completado",
+                fase: "Continuo"
+            },
+            {
+                id: 13,
+                titulo: "Ejecución y mitigación técnica del piloto Insylo",
+                impactoTitulo: "Control de inventarios y costos",
+                impactoDetalle: "Busca validar la estabilidad de dispositivos de telemetría IoT en silos para transformarlos en una fuente confiable de medición de consumo de alimento en tiempo real.",
+                cronologia: "Piloto en ejecución (Más de un año de datos)",
+                equipo: "Responsables técnicos: Wilmer y Carlos, en conjunto con Asimetrix",
+                esfuerzo: "Técnico medio; requiere validación sistemática",
+                esfuerzoNivel: "Medio",
+                actividadesClave: [
+                    "Monitoreo automatizado de los 4 silos de la granja piloto (Machijure 15).",
+                    "Mitigación de problemas de conectividad en campo mediante antenas de alta recepción.",
+                    "Gestión de la actualización tecnológica del dispositivo a la versión 2.",
+                    "Tarea pendiente: Estructurar un plan de validación sistemático contra pesos reales de básculas."
+                ],
+                categoria: "Dispositivos & IoT",
+                estado: "En Ejecución",
+                fase: "Continuo"
+            },
+            {
+                id: 14,
+                titulo: "Etapa de discovery y entendimiento del negocio",
+                impactoTitulo: "Estructura funcional del Digital Twin",
+                impactoDetalle: "Asegura que el gemelo digital se construya sobre información confiable, consistente y con un entendimiento nítido de las palancas de valor productivas y económicas de Aliar.",
+                cronologia: "Mayo 2026 (Fase Actual)",
+                equipo: "Especialistas técnicos y de negocio de Agricultura y Porcicultura",
+                esfuerzo: "Intensivo (Mesas simultáneas de inmersión)",
+                esfuerzoNivel: "Alto",
+                actividadesClave: [
+                    "Identificación detallada de las etapas del proceso productivo y cuellos de botella para agricultura y porcicultura.",
+                    "Mapeo profundo de Planta de Secado Aliar para optimización de costos de gas/combustible.",
+                    "Identificación de más de 12 fuentes de información determinando lagunas de datos."
+                ],
+                categoria: "Digital Twin",
+                estado: "En Ejecución",
+                fase: "Fase Actual"
+            },
+            {
+                id: 15,
+                titulo: "Construcción de arquitectura e implementación del Digital Twin",
+                impactoTitulo: "Optimización automatizada y margen",
+                impactoDetalle: "Permite construir capacidades de simulación, análisis predictivo y control en tiempo real de las variables de costos, mantenimiento y eficiencia de secado, transformando los datos históricos en decisiones predictivas que aumentan el margen.",
+                cronologia: "Mayo 2026 (Proyección de Cierre)",
+                equipo: "4 Especialistas técnicos (incluyendo 1 consultor externo)",
+                esfuerzo: "Eficiente y enfocado: 3 sesiones ejecutivas y mesas técnicas",
+                esfuerzoNivel: "Alto",
+                actividadesClave: [
+                    "Mapeo exhaustivo de las fuentes de información definitivas de Aliar.",
+                    "Consolidación final de las bases de datos identificadas en el Data Lake.",
+                    "Identificación y corrección de inconsistencias de datos.",
+                    "Definición de la estructura de integración final del gemelo digital de secado.",
+                    "Alineación final de criterios con áreas técnicas."
+                ],
+                categoria: "Digital Twin",
+                estado: "Pendiente",
+                fase: "Proyección"
+            }
+        ];
+
+        // Global States of UI
+        let currentLayout = 'flow';
+        let currentCategory = 'Todos';
+        let currentStatus = 'Todos';
+        let searchKeyword = '';
+        let selectedId = 14; // Default starting inspection (Fase Actual)
+
+        // Simulators local variables state
+        let driedPlantTemp = 82;
+        let driedPlantHumidityIn = 19.5;
+        let siloFillValues = [
+            { id: 1, name: 'Silo A (Hembras)', fill: 78, temp: 24.2, rssi: -65 },
+            { id: 2, name: 'Silo B (Iniciación)', fill: 42, temp: 25.1, rssi: -72 },
+            { id: 3, name: 'Silo C (Ceba 1)', fill: 12, temp: 23.8, rssi: -84 },
+            { id: 4, name: 'Silo D (Ceba 2)', fill: 85, temp: 24.9, rssi: -62 }
+        ];
+        let optiMarketWeight = 110;
+        let optiMarketFeedCost = 1.35;
+        let optiMarketPriceFactor = 3.8;
+
+        // On Load Page
+        window.addEventListener('DOMContentLoaded', () => {
+            renderMilestones();
+            renderInspector();
+        });
+
+        // Toggle layouts
+        function toggleLayout(type) {
+            currentLayout = type;
+            const flowBtn = document.getElementById('btn-layout-flow');
+            const gridBtn = document.getElementById('btn-layout-grid');
+            const container = document.getElementById('milestone-cards-container');
+
+            if (type === 'grid') {
+                flowBtn.className = 'text-xs font-bold px-3.5 py-1.5 rounded-lg transition-all cursor-pointer text-ax-fg-3 hover:text-ax-fg-2';
+                gridBtn.className = 'text-xs font-bold px-3.5 py-1.5 rounded-lg transition-all cursor-pointer bg-white text-ax-fg-1 shadow-xs';
+                container.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
+            } else {
+                flowBtn.className = 'text-xs font-bold px-3.5 py-1.5 rounded-lg transition-all cursor-pointer bg-white text-ax-fg-1 shadow-xs';
+                gridBtn.className = 'text-xs font-bold px-3.5 py-1.5 rounded-lg transition-all cursor-pointer text-ax-fg-3 hover:text-ax-fg-2';
+                container.className = 'grid grid-cols-1 gap-4';
+            }
+            renderMilestones();
+        }
+
+        // Search features
+        function filterMilestones() {
+            const input = document.getElementById('search-input');
+            searchKeyword = input.value.trim().toLowerCase();
+            renderMilestones();
+        }
+
+        function clearSearch() {
+            document.getElementById('search-input').value = '';
+            searchKeyword = '';
+            renderMilestones();
+        }
+
+        // Category pills filter
+        function setCategoryFilter(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                if (btn.innerText.indexOf(cat) !== -1) {
+                    btn.className = 'category-pill text-xs font-semibold px-3 py-1.5 rounded-full border transition-all cursor-pointer bg-ax-primary text-white border-ax-primary shadow-xs';
+                } else {
+                    btn.className = 'category-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-ax-border text-ax-fg-2 bg-white hover:bg-ax-bg-2';
+                }
+            });
+            renderMilestones();
+        }
+
+        // Status filters
+        function setStatusFilter(st) {
+            currentStatus = st;
+            document.querySelectorAll('.status-tab').forEach(btn => {
+                const text = btn.innerText;
+                let isMatch = false;
+                if (st === 'Todos' && text === 'Todos') isMatch = true;
+                if (st === 'Completado' && text.indexOf('Listo') !== -1) isMatch = true;
+                if (st === 'En Ejecución' && text.indexOf('Actual') !== -1) isMatch = true;
+                if (st === 'Pendiente' && text.indexOf('Proyección') !== -1) isMatch = true;
+
+                if (isMatch) {
+                    btn.className = 'status-tab text-xs px-3 py-1 rounded-lg border transition-all cursor-pointer bg-ax-fg-1 text-white border-ax-fg-1 font-bold';
+                } else {
+                    btn.className = 'status-tab text-xs px-3 py-1 rounded-lg border border-ax-border text-ax-fg-2 bg-ax-bg-2 hover:bg-ax-bg-3';
+                }
+            });
+            renderMilestones();
+        }
+
+        // Milestone list compiler & renderer
+        function renderMilestones() {
+            const container = document.getElementById('milestone-cards-container');
+            container.innerHTML = '';
+
+            const filtered = MILESTONES.filter(m => {
+                // Category match
+                if (currentCategory !== 'Todos' && m.categoria !== currentCategory) return false;
+                // Status match
+                if (currentStatus !== 'Todos') {
+                    if (currentStatus === 'Completado' && m.estado !== 'Completado') return false;
+                    if (currentStatus === 'En Ejecución' && m.estado !== 'En Ejecución') return false;
+                    if (currentStatus === 'Pendiente' && m.estado !== 'Pendiente') return false;
+                }
+                // Search keyword match
+                if (searchKeyword) {
+                    const textContent = `${m.titulo} ${m.impactoTitulo} ${m.impactoDetalle} ${m.equipo} ${m.categoria} H-${m.id}`.toLowerCase();
+                    if (!textContent.includes(searchKeyword)) return false;
+                }
+                return true;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white border border-ax-border rounded-xl p-12 text-center text-ax-fg-2 flex flex-col items-center justify-center">
+                        <div class="p-4 bg-ax-bg-2 rounded-full text-ax-fg-3 mb-3">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                        <h4 class="text-base font-bold text-ax-fg-1">No se encontraron hitos</h4>
+                        <p class="text-xs text-ax-fg-3 mt-1 max-w-sm">Intente reajustando la búsqueda o seleccionando otra categoría en los filtros.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(m => {
+                // Color badges depending on Category
+                let badgeClass = 'bg-ax-primary-soft text-ax-primary border-ax-border';
+                if (m.categoria === 'Cimientos') {
+                    badgeClass = 'bg-[#FBF1D6] text-[#E0A100] border-[#FBF1D6]';
+                } else if (m.categoria === 'Digital Twin') {
+                    badgeClass = 'bg-[#E5F2EB] text-[#2E8B57] border-[#E5F2EB]';
+                }
+
+                // Text labels depending on Status
+                let statusBadge = `
+                    <span class="inline-flex items-center gap-1 text-[10px] font-semibold text-ax-fg-3 bg-ax-bg-2 border border-ax-border px-2 py-0.5 rounded-full">
+                        <span class="w-1.5 h-1.5 bg-ax-fg-3 rounded-full"></span> Proyección
+                    </span>
+                `;
+                if (m.estado === 'Completado') {
+                    statusBadge = `
+                        <span class="inline-flex items-center gap-1 text-[10px] font-semibold text-[#2E8B57] bg-[#E5F2EB] border border-[#E5F2EB] px-2 py-0.5 rounded-full">
+                            ✓ Listo
+                        </span>
+                    `;
+                } else if (m.estado === 'En Ejecución') {
+                    statusBadge = `
+                        <span class="inline-flex items-center gap-1 text-[10px] font-bold text-ax-primary bg-ax-primary-soft border border-ax-border px-2 py-0.5 rounded-full">
+                            ● Fase Actual
+                        </span>
+                    `;
+                }
+
+                const isActive = m.id === selectedId;
+                const borderClass = isActive 
+                    ? 'border-ax-primary shadow-md ring-1 ring-ax-primary/5 bg-[#EAF2F5]' 
+                    : 'border-ax-border hover:shadow-md hover:border-ax-border-strong bg-white';
+
+                const cardHtml = `
+                    <div id="m-card-${m.id}" onclick="selectMilestone(${m.id})" class="group p-5 border rounded-xl transition-all duration-300 cursor-pointer ${borderClass}">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-mono font-bold text-ax-fg-3 bg-ax-bg-2 border border-ax-border px-1.5 py-0.5 rounded">
+                                    H-${String(m.id).padStart(2, '0')}
+                                </span>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full border ${badgeClass}">
+                                    ${m.categoria}
+                                </span>
+                            </div>
+                            ${statusBadge}
+                        </div>
+                        <h4 class="text-sm font-bold text-ax-fg-1 group-hover:text-ax-primary transition-colors leading-tight mb-1.5">
+                            ${m.titulo}
+                        </h4>
+                        <p class="text-[11px] text-ax-fg-2 line-clamp-2 leading-relaxed">
+                            <strong class="text-ax-fg-1">${m.impactoTitulo}:</strong> ${m.impactoDetalle}
+                        </p>
+                        <div class="pt-3 mt-3 border-t border-ax-bg-3/70 flex flex-wrap items-center justify-between gap-2 text-ax-fg-2 text-[11px]">
+                            <span class="truncate max-w-[200px] flex items-center gap-1 font-medium text-ax-fg-1">
+                                📅 ${m.cronologia}
+                            </span>
+                            <span class="text-ax-primary font-bold flex items-center gap-0.5">
+                                Inspeccionar ➜
+                            </span>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHtml;
+            });
+        }
+
+        // Selection event
+        function selectMilestone(id) {
+            selectedId = id;
+            document.querySelectorAll('[id^="m-card-"]').forEach(card => {
+                card.className = card.className.replace('border-ax-primary shadow-md ring-1 ring-ax-primary/5 bg-[#EAF2F5]', 'border-ax-border bg-white');
+            });
+            const activeCard = document.getElementById(`m-card-${id}`);
+            if (activeCard) {
+                activeCard.className = activeCard.className.replace('border-ax-border bg-white', 'border-ax-primary shadow-md ring-1 ring-ax-primary/5 bg-[#EAF2F5]');
+            }
+            renderInspector();
+            
+            // Sync layers class highlight
+            document.querySelectorAll('.layer-item').forEach(item => {
+                item.className = item.className.replace('border-ax-primary bg-ax-primary-soft', 'border-ax-border bg-white');
+            });
+        }
+
+        function selectAndScrollToMilestone(id) {
+            selectMilestone(id);
+            const card = document.getElementById(`m-card-${id}`);
+            if (card) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Navigate inside inspectors
+        function navigateInspector(dir) {
+            let nextIndex = MILESTONES.findIndex(m => m.id === selectedId) + dir;
+            if (nextIndex >= 0 && nextIndex < MILESTONES.length) {
+                selectAndScrollToMilestone(MILESTONES[nextIndex].id);
+            }
+        }
+
+        // Dynamic Inspector sidebar compiled renderer
+        function renderInspector() {
+            const body = document.getElementById('panel-dynamic-body');
+            const m = MILESTONES.find(milestone => milestone.id === selectedId);
+            if (!m) return;
+
+            let effortBadgeColor = 'bg-[#E0A100]';
+            if (m.esfuerzoNivel === 'Bajo') effortBadgeColor = 'bg-[#2E8B57]';
+            if (m.esfuerzoNivel === 'Continuo' || m.esfuerzoNivel === 'Automatizado') effortBadgeColor = 'bg-ax-primary';
+
+            // Base details
+            let html = `
+                <div>
+                    <span class="text-xs text-ax-primary-soft font-mono font-bold block mb-1">HITO ${m.id} DE 15 • ${m.cronologia}</span>
+                    <h3 class="text-lg font-bold text-white leading-tight">${m.titulo}</h3>
+                </div>
+
+                <div class="bg-ax-dark-bg-2 border border-ax-dark-border rounded-xl p-4">
+                    <div class="flex items-center gap-1.5 text-ax-primary-soft mb-1">
+                        <span class="text-sm">⭐</span>
+                        <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider">Impacto: ${m.impactoTitulo}</h4>
+                    </div>
+                    <p class="text-xs text-ax-dark-fg-2 leading-relaxed">${m.impactoDetalle}</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-ax-dark-bg-2 p-3.5 rounded-xl border border-ax-dark-border/40">
+                        <span class="text-[9px] uppercase font-mono tracking-wider text-ax-dark-fg-3 block mb-0.5">Esfuerzo</span>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full ${effortBadgeColor}"></span>
+                            <span class="text-xs font-bold text-white">${m.esfuerzoNivel}</span>
+                        </div>
+                        <p class="text-[10px] text-ax-dark-fg-3 truncate mt-1">${m.esfuerzo}</p>
+                    </div>
+
+                    <div class="bg-ax-dark-bg-2 p-3.5 rounded-xl border border-ax-dark-border/40">
+                        <span class="text-[9px] uppercase font-mono tracking-wider text-ax-dark-fg-3 block mb-0.5">Responsable</span>
+                        <span class="text-xs font-bold text-white block truncate">${m.fase}</span>
+                        <p class="text-[10px] text-ax-dark-fg-3 truncate mt-1">${m.equipo.split('(')[0]}</p>
+                    </div>
+                </div>
+
+                <!-- Activities check audits tracker -->
+                <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h5 class="text-[10px] uppercase font-mono text-ax-dark-fg-2 font-bold select-none">Actividades de Auditoría</h5>
+                        <span class="text-[10px] font-mono text-ax-primary-soft font-bold">100% Validado</span>
+                    </div>
+                    <div class="space-y-1.5 bg-ax-dark-bg-2 p-2 rounded-lg border border-ax-dark-border/60 max-h-48 overflow-y-auto custom-scrollbar">
+            `;
+
+            m.actividadesClave.forEach((act, idx) => {
+                html += `
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-ax-dark-bg-3/50 text-ax-dark-fg-2">
+                        <span class="text-[#2E8B57] font-bold shrink-0 text-xs mt-0.5">✓</span>
+                        <span class="text-xs leading-relaxed text-ax-dark-fg-1">${act}</span>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+            `;
+
+            // Append specific interactive simulators depending on selection id
+            if (m.id === 13) {
+                // Silo IoT Piloto Insylo Simulation (Hito 13)
+                html += `
+                    <div class="pt-5 border-t border-ax-dark-border mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xs font-mono font-bold text-ax-primary-soft uppercase tracking-widest">📡 Monitoreo Telemetría IoT Silos (Insylo)</h4>
+                            <button onclick="updateSiloData()" class="text-[9px] font-mono text-ax-primary bg-ax-primary-soft hover:bg-ax-primary/10 border border-ax-primary px-2 py-0.5 rounded flex items-center gap-1 active:scale-95 cursor-pointer">
+                                ↺ Simular Lecturas
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 mt-2">
+                `;
+
+                siloFillValues.forEach(s => {
+                    html += `
+                        <div class="bg-ax-dark-bg-3 border border-ax-dark-border p-2 rounded">
+                            <div class="flex justify-between text-[9px] text-ax-dark-fg-3 font-semibold truncate mb-1">
+                                <span>${s.name}</span>
+                            </div>
+                            <div class="relative h-12 w-full bg-ax-dark-bg-2 border border-ax-dark-border rounded overflow-hidden flex flex-col justify-end">
+                                <div class="w-full bg-[#006084]/80 transition-all duration-700" style="height: ${s.fill}%"></div>
+                                <span class="absolute inset-0 flex items-center justify-center font-mono text-[10px] text-white font-bold">${s.fill}%</span>
+                            </div>
+                            <div class="flex justify-between font-mono text-[8px] text-ax-dark-fg-3 mt-1">
+                                <span>T: ${s.temp}°C</span>
+                                <span>Signal: ${s.rssi}dB</span>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            } else if (m.id === 14 || m.id === 15) {
+                // Dry Plant Optimal Boiler Efficiency Simulator (Hito 14-15)
+                const error = Math.abs(driedPlantHumidityIn * (1 - (driedPlantTemp / 100) * 0.45) - 13.0);
+                const efficiency = Math.max(10, Math.min(100, Math.round(100 - error * 15)));
+                const savings = Math.max(20000, Math.round((50 - error * 10) * 45000));
+
+                html += `
+                    <div class="pt-5 border-t border-ax-dark-border mt-4">
+                        <h4 class="text-xs font-mono font-bold text-ax-primary-soft uppercase tracking-widest">🎛️ Simulador: Planta de Secado Aliar</h4>
+                        <p class="text-[10px] text-ax-dark-fg-3 mt-1">Modifique variables operativas reales para proyectar curvas de ahorro de gas.</p>
+                        
+                        <div class="space-y-3 bg-ax-dark-bg-3 p-3 rounded-lg border border-ax-dark-border/80 mt-2">
+                            <div>
+                                <div class="flex justify-between text-[10px] text-ax-dark-fg-3 font-semibold mb-1">
+                                    <span>Temperatura Caldera</span>
+                                    <span class="text-white font-mono">${driedPlantTemp}°C</span>
+                                </div>
+                                <input type="range" min="70" max="95" value="${driedPlantTemp}" oninput="adjustBoilerTemp(this.value)" class="w-full accent-ax-primary h-1 bg-ax-dark-bg-2 rounded cursor-pointer">
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-[10px] text-ax-dark-fg-3 font-semibold mb-1">
+                                    <span>Humedad Entrada Grano</span>
+                                    <span class="text-white font-mono">${driedPlantHumidityIn}%</span>
+                                </div>
+                                <input type="range" min="15" max="25" step="0.5" value="${driedPlantHumidityIn}" oninput="adjustInletHumidity(this.value)" class="w-full accent-ax-primary h-1 bg-ax-dark-bg-2 rounded cursor-pointer">
+                            </div>
+
+                            <div class="flex items-center justify-between border-t border-ax-dark-border/40 pt-2.5">
+                                <div class="text-center">
+                                    <span class="text-[8px] text-ax-dark-fg-3 block uppercase">Humedad Salida</span>
+                                    <span class="text-sm font-mono font-bold text-white">13.0% meta</span>
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-[8px] text-ax-dark-fg-3 block uppercase">Eficiencia Térmica</span>
+                                    <span class="text-sm font-mono font-bold text-[#2E8B57]">${efficiency}%</span>
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-[8px] text-ax-dark-fg-3 block uppercase">Ahorro Predictivo</span>
+                                    <span class="text-xs font-mono font-bold text-white">$${savings.toLocaleString('es-CO')} COP/h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom high-fidelity quote requirement implementation -->
+                        <div class="mt-3 p-3 bg-ax-primary/10 text-ax-primary-soft rounded border border-ax-primary/30 text-[10px] italic leading-relaxed text-center font-medium">
+                            "Conoce el peso de tus lotes de cerdos en engorde con nuestras cámaras de medición precisa en tiempo real."
+                        </div>
+                    </div>
+                `;
+            } else if (m.id === 8) {
+                // Aliar Anomaly Detection Engine (Hito 8)
+                html += `
+                    <div class="pt-5 border-t border-ax-dark-border mt-4 text-xs space-y-2">
+                        <h4 class="text-xs font-mono font-bold text-[#E0A100] uppercase tracking-widest">⚠️ Monitor de Alerta Temprana Asimetrix</h4>
+                        <div class="bg-ax-dark-bg-2 p-3 rounded border border-ax-dark-border">
+                            <span class="text-[10px] font-bold text-[#E0A100] block mb-1">Detección Reciente Soltada:</span>
+                            <p class="text-[11px] leading-relaxed text-ax-dark-fg-2">Sitio 3, Núcleo San Barlovento, Lote 42. Detectada caída del 13.8% en ganancia de peso zootécnico contra promedio histórico.</p>
+                        </div>
+                        <div class="text-center p-2 rounded bg-ax-dark-bg-3 font-mono text-[9px] text-[#2E8B57]">
+                            ● Motor de Inferencia Activo (Analizando 100% de sitios de ceba)
+                        </div>
+                    </div>
+                `;
+            } else if (m.id === 9) {
+                // OptiMarket Margin Estimator Calculator (Hito 9)
+                const optimalDays = Math.max(10, Math.round((optiMarketWeight - 80) * 1.4));
+                const feedSpent = optimalDays * 2.1 * optiMarketFeedCost;
+                const weightRev = optiMarketWeight * optiMarketPriceFactor;
+                const marginsPerPig = Number((weightRev - feedSpent).toFixed(1));
+
+                html += `
+                    <div class="pt-5 border-t border-ax-dark-border mt-4">
+                        <h4 class="text-xs font-mono font-bold text-ax-primary-soft uppercase tracking-widest">⚖️ Simulador de Margen OptiMarket</h4>
+                        <p class="text-[9.5px] text-ax-dark-fg-3">Pruebe combinaciones de precio para estimar permanencia de lotes.</p>
+                        
+                        <div class="space-y-3 bg-ax-dark-bg-3 p-3 rounded border border-ax-dark-border/85 mt-2">
+                            <div>
+                                <div class="flex justify-between text-[10px] text-ax-dark-fg-3 font-semibold mb-1">
+                                    <span>Peso Salida Meta</span>
+                                    <span class="text-white font-mono">${optiMarketWeight} Kg</span>
+                                </div>
+                                <input type="range" min="95" max="125" value="${optiMarketWeight}" oninput="adjustOptiWeight(this.value)" class="w-full accent-ax-primary h-1 bg-ax-dark-bg-2 rounded cursor-pointer">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <span class="text-[9px] text-ax-dark-fg-3 block mb-1">Costo Alimento ($/kg)</span>
+                                    <input type="number" step="0.05" value="${optiMarketFeedCost}" onchange="adjustOptiFeed(this.value)" class="w-full text-white bg-ax-dark-bg-2 border border-ax-dark-border rounded px-1.5 py-0.5 text-xs font-mono">
+                                </div>
+                                <div>
+                                    <span class="text-[9px] text-ax-dark-fg-3 block mb-1">Precio Porcino ($/kg)</span>
+                                    <input type="number" step="0.1" value="${optiMarketPriceFactor}" onchange="adjustOptiPrice(this.value)" class="w-full text-white bg-ax-dark-bg-2 border border-ax-dark-border rounded px-1.5 py-0.5 text-xs font-mono">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between border-t border-ax-dark-border/40 pt-2 text-center">
+                                <div>
+                                    <span class="text-[8px] text-ax-dark-fg-3 block">Permanencia</span>
+                                    <span class="text-xs font-mono font-bold text-white">${optimalDays} días</span>
+                                </div>
+                                <div>
+                                    <span class="text-[8px] text-ax-dark-fg-3 block">Margen Neto Estimado</span>
+                                    <span class="text-xs font-mono font-bold text-[#2E8B57]">$${marginsPerPig} COP/Cerd.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom high-fidelity quote requirement implementation -->
+                        <div class="mt-3 p-3 bg-ax-primary/10 text-ax-primary-soft rounded border border-ax-primary/30 text-[10px] italic leading-relaxed text-center font-medium">
+                            "Conoce el peso de tus lotes de cerdos en engorde con nuestras cámaras de medición precisa en tiempo real."
+                        </div>
+                    </div>
+                `;
+            } else {
+                // General Roadmap information details banner (For standard milestones)
+                html += `
+                    <div class="flex items-center gap-2.5 text-ax-dark-fg-2 pt-4 border-t border-ax-dark-border text-xs mt-4">
+                        <span class="text-sm">ℹ️</span>
+                        <p class="text-ax-dark-fg-3 font-medium">
+                            Usted está visualizando el <strong class="text-white">Hito ${m.id}</strong> del cimiento funcional liderado por el equipo de <span class="text-white underline decoration-ax-primary/40">${m.equipo.split('(')[0].trim()}</span>.
+                        </p>
+                    </div>
+                `;
+            }
+
+            body.innerHTML = html;
+        }
+
+        // Simulator updates triggers inside panel display
+        function updateSiloData() {
+            siloFillValues = siloFillValues.map(s => {
+                const fillChange = Math.round(Math.random() * 8) - 4;
+                const tempChange = Number((Math.random() * 1.5 - 0.75).toFixed(1));
+                const rssiChange = Math.round(Math.random() * 6) - 3;
+                return {
+                    id: s.id,
+                    name: s.name,
+                    fill: Math.max(5, Math.min(100, s.fill + fillChange)),
+                    temp: Number((s.temp + tempChange).toFixed(1)),
+                    rssi: Math.max(-95, Math.min(-45, s.rssi + rssiChange))
+                };
+            });
+            renderInspector();
+        }
+
+        function adjustBoilerTemp(val) {
+            driedPlantTemp = Number(val);
+            renderInspector();
+        }
+
+        function adjustInletHumidity(val) {
+            driedPlantHumidityIn = Number(val);
+            renderInspector();
+        }
+
+        function adjustOptiWeight(val) {
+            optiMarketWeight = Number(val);
+            renderInspector();
+        }
+
+        function adjustOptiFeed(val) {
+            optiMarketFeedCost = Number(val);
+            renderInspector();
+        }
+
+        function adjustOptiPrice(val) {
+            optiMarketPriceFactor = Number(val);
+            renderInspector();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  --color-ax-primary: #006084;
+  --color-ax-primary-hover: #00547A;
+  --color-ax-primary-pressed: #00415F;
+  --color-ax-primary-soft: #E5EFF3;
+  
+  --color-ax-fg-1: #0A0F3D;
+  --color-ax-fg-2: #4A5566;
+  --color-ax-fg-3: #6C7878;
+  --color-ax-bg-1: #FFFFFF;
+  --color-ax-bg-2: #F5F6F8;
+  --color-ax-bg-3: #ECEEF1;
+  --color-ax-border: #D8DCE0;
+  --color-ax-border-strong: #B4BDC4;
+  
+  /* Dark Mode */
+  --color-ax-dark-bg-1: #0A0F3D;
+  --color-ax-dark-bg-2: #111A52;
+  --color-ax-dark-bg-3: #1B2566;
+  --color-ax-dark-fg-1: #FFFFFF;
+  --color-ax-dark-fg-2: #C7CCE0;
+  --color-ax-dark-fg-3: #8C92AD;
+  --color-ax-dark-border: #2A3270;
+}
+
+/* Custom styles for high-fidelity interactive elements */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.8);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.15); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.ring-pulse {
+  animation: pulse-ring 2.5s infinite;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Aliar Digital Twin Roadmap",
+  "description": "Interactive visual timeline and roadmap of Aliar's business discovery, data engineering, analytics, and Digital Twin architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
