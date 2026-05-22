@@ -10,7 +10,7 @@ export interface Milestone {
   esfuerzo: string;
   esfuerzoNivel: EsfuerzoNivel;
   actividadesClave: string[];
-  categoria: 'Cimientos' | 'Gobernanza & Datos' | 'Analítica & Operaciones' | 'Dispositivos & IoT' | 'Digital Twin';
+  categoria: 'Personalización de plataforma' | 'Analítica & Operaciones' | 'Dispositivos & IoT' | 'Digital Twin';
   estado: 'Completado' | 'En Ejecución' | 'Pendiente';
   fase: string; // e.g., "Q1 2026", "Q2 2026", "Continuo"
 }

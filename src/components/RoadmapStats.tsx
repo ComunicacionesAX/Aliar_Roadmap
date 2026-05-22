@@ -13,8 +13,26 @@ export const RoadmapStats: React.FC<StatsProps> = ({ milestones }) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-      {/* Percentage gauge card */}
+      {/* Integration teams */}
       <div className="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:border-ax-primary/30">
+        <div className="p-3 bg-ax-primary-soft text-ax-primary rounded-lg">
+          <Users className="w-6 h-6" />
+        </div>
+        <div>
+          <h4 className="text-xs font-semibold text-ax-fg-3 tracking-wider leading-none mb-1">
+            Alianza técnica
+          </h4>
+          <p className="text-base font-bold text-ax-fg-1">
+            3 organizaciones
+          </p>
+          <p className="text-[11px] text-ax-fg-2 mt-0.5">
+            Aliar S.A. | Asimetrix | Premex Allius
+          </p>
+        </div>
+      </div>
+
+      {/* Percentage gauge card */}
+      <div className="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:border-[#2E8B57]/30">
         <div className="relative w-16 h-16 shrink-0 flex items-center justify-center">
           {/* Circular progress SVG */}
           <svg className="w-full h-full transform -rotate-90">
@@ -30,7 +48,7 @@ export const RoadmapStats: React.FC<StatsProps> = ({ milestones }) => {
               cx="32"
               cy="32"
               r="28"
-              className="stroke-ax-primary transition-all duration-500"
+              className="stroke-[#2E8B57] transition-all duration-500"
               strokeWidth="5"
               fill="transparent"
               strokeDasharray={2 * Math.PI * 28}
@@ -69,24 +87,6 @@ export const RoadmapStats: React.FC<StatsProps> = ({ milestones }) => {
           <p className="text-xs text-ax-fg-2 mt-1 flex items-center gap-1">
             <span className="w-2 h-2 bg-ax-primary rounded-full inline-block ring-pulse" />
             Mayo 2026
-          </p>
-        </div>
-      </div>
-
-      {/* Integration teams */}
-      <div className="bg-white border border-ax-border rounded-xl p-5 shadow-xs flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:border-ax-primary/30">
-        <div className="p-3 bg-ax-primary-soft text-ax-primary rounded-lg">
-          <Users className="w-6 h-6" />
-        </div>
-        <div>
-          <h4 className="text-xs font-semibold text-ax-fg-3 tracking-wider leading-none mb-1">
-            Alianza técnica
-          </h4>
-          <p className="text-base font-bold text-ax-fg-1">
-            3 organizaciones
-          </p>
-          <p className="text-[11px] text-ax-fg-2 mt-0.5">
-            Aliar S.A. | Asimetrix | Premex Allius
           </p>
         </div>
       </div>

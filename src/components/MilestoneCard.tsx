@@ -12,17 +12,11 @@ export const MilestoneCard: React.FC<CardProps> = ({ milestone, onSelect, isActi
   // Color configuration depending on category
   const getCategoryTheme = (cat: Milestone['categoria']) => {
     switch (cat) {
-      case 'Cimientos':
+      case 'Personalización de plataforma':
         return {
           bg: 'bg-[#FBF1D6] text-[#E0A100] border-[#FBF1D6]',
           dot: 'bg-[#E0A100]',
           text: 'text-[#E0A100]'
-        };
-      case 'Gobernanza & Datos':
-        return {
-          bg: 'bg-ax-primary-soft text-ax-primary border-[#D8DCE0]',
-          dot: 'bg-ax-primary',
-          text: 'text-ax-primary'
         };
       case 'Dispositivos & IoT':
         return {

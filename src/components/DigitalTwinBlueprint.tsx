@@ -19,7 +19,7 @@ export const DigitalTwinBlueprint: React.FC<BlueprintProps> = ({ milestones, onS
       icon: <Database className="w-5 h-5 text-ax-primary" />,
       colorClass: "border-ax-border bg-white hover:bg-ax-bg-2 text-ax-fg-1",
       pillColor: "bg-ax-primary-soft text-ax-primary",
-      milestoneIds: [1, 2, 5, 13]
+      milestoneIds: [1, 2, 5, 13, 17]
     },
     {
       id: "ingestion",
@@ -46,7 +46,7 @@ export const DigitalTwinBlueprint: React.FC<BlueprintProps> = ({ milestones, onS
       icon: <TrendingUp className="w-5 h-5 text-ax-primary" />,
       colorClass: "border-ax-border bg-white hover:bg-ax-bg-2 text-ax-fg-1",
       pillColor: "bg-ax-primary-soft text-ax-primary",
-      milestoneIds: [10, 11, 12]
+      milestoneIds: [10, 11, 12, 16]
     },
     {
       id: "twin",

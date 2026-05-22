@@ -39,7 +39,7 @@ export default function App() {
 
   // Handle navigation buttons in detail view
   const hasPrev = selectedId > 1;
-  const hasNext = selectedId < 15;
+  const hasNext = selectedId < MILESTONES.length;
 
   const handlePrev = () => {
     if (hasPrev) {
@@ -67,7 +67,7 @@ export default function App() {
   };
 
   // Categories list
-  const categories = ['Todos', 'Cimientos', 'Gobernanza & Datos', 'Analítica & Operaciones', 'Dispositivos & IoT', 'Digital Twin'];
+  const categories = ['Todos', 'Personalización de plataforma', 'Dispositivos & IoT', 'Digital Twin', 'Analítica & Operaciones'];
   
   // Status list
   const statuses = ['Todos', 'Completado', 'En Ejecución', 'Pendiente'];
@@ -176,7 +176,7 @@ export default function App() {
               Alineación de infraestructura y capacidades predictivas
             </h2>
             <p className="text-xs md:text-sm text-[#C7CCE0] mt-2.5 leading-relaxed">
-              El Gemelo Digital (Digital Twin) de Aliar consolidará 15 hitos de ingeniería de datos, optimización automatizada de gránulos de plantas de secado, dispositivos IoT de silaje de alimentos e inteligencia productiva (Porcicultura & Agro) para garantizar una toma de decisiones predictiva que maximice el margen operativo del negocio.
+              El Gemelo Digital (Digital Twin) de Aliar consolidará {MILESTONES.length} hitos de ingeniería de datos, optimización automatizada de gránulos de plantas de secado, dispositivos IoT de silaje de alimentos e inteligencia productiva (Porcicultura & Agro) para garantizar una toma de decisiones predictiva que maximice el margen operativo del negocio.
             </p>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function App() {
                   title={sortOrder === 'asc' ? 'Ver el más reciente primero' : 'Ver el más antiguo primero'}
                 >
                   <ListOrdered className="w-4 h-4 text-ax-fg-3" />
-                  <span>Orden: {sortOrder === 'asc' ? 'Id (1-15)' : 'Id (15-1)'}</span>
+                  <span>Orden: {sortOrder === 'asc' ? `Id (1-${MILESTONES.length})` : `Id (${MILESTONES.length}-1)`}</span>
                 </button>
               </div>
             </div>
@@ -444,7 +444,7 @@ export default function App() {
               <Compass className="w-5 h-5 text-ax-primary shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-ax-fg-1 block">Navegación interactiva:</span>
-                Seleccionando cualquiera de los 15 hitos, se actualizará dinámicamente la ficha técnica de auditoría, las métricas de esfuerzo y los simuladores de gemelos digitales en el panel derecho de la consola.
+                Seleccionando cualquiera de los {MILESTONES.length} hitos, se actualizará dinámicamente la ficha técnica de auditoría, las métricas de esfuerzo y los simuladores de gemelos digitales en el panel derecho de la consola.
               </div>
             </div>
 
