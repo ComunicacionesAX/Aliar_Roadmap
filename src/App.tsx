@@ -145,17 +145,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2.5">
-            <button
-              onClick={handleExportRoadmap}
-              className="text-xs font-bold text-ax-fg-1 bg-white hover:bg-ax-bg-2 border border-ax-border px-4 py-2.5 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-xs active:scale-95"
-              title="Descargar ficha descriptiva completa del proyecto"
-            >
-              <Download className="w-4 h-4 text-ax-fg-2" />
-              <span className="hidden sm:inline">Exportar ficha completa</span>
-              <span className="sm:hidden">Exportar</span>
-            </button>
-          </div>
+
         </div>
       </header>
 
@@ -211,40 +201,6 @@ export default function App() {
 
               {/* Advanced controls */}
               <div className="flex flex-wrap items-center gap-3">
-                {/* Horizontal / Vertical layout choice */}
-                <div className="bg-ax-bg-2 p-1 rounded-xl border border-ax-border flex items-center">
-                  <button
-                    onClick={() => setActiveLayout('sinuous')}
-                    className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
-                      activeLayout === 'sinuous'
-                        ? 'bg-white text-ax-fg-1 shadow-xs'
-                        : 'text-ax-fg-3 hover:text-ax-fg-2'
-                    }`}
-                  >
-                    Mapa infográfico
-                  </button>
-                  <button
-                    onClick={() => setActiveLayout('vertical')}
-                    className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
-                      activeLayout === 'vertical'
-                        ? 'bg-white text-ax-fg-1 shadow-xs'
-                        : 'text-ax-fg-3 hover:text-ax-fg-2'
-                    }`}
-                  >
-                    Flujo continuo
-                  </button>
-                  <button
-                    onClick={() => setActiveLayout('grid')}
-                    className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
-                      activeLayout === 'grid'
-                        ? 'bg-white text-ax-fg-1 shadow-xs'
-                        : 'text-ax-fg-3 hover:text-ax-fg-2'
-                    }`}
-                  >
-                    Bento grupos
-                  </button>
-                </div>
-
                 {/* Sort Order Toggler */}
                 <button
                   onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
@@ -483,8 +439,7 @@ export default function App() {
               <Compass className="w-5 h-5 text-ax-primary-soft" />
             </div>
             <div>
-              <span className="text-white font-bold text-sm block">Aliar S.A. Digital Twin Roadmap</span>
-              <p className="text-xs text-[#8C92AD] mt-0.5">Control de eficiencia térmica, IoT, sanidad y gestión porcícola.</p>
+              <span className="text-white font-bold text-sm block">Alineación de infraestructura y capacidades predictivas</span>
             </div>
           </div>
           <p className="text-xs text-[#8C92AD] text-center md:text-right">

@@ -137,7 +137,7 @@ export const MilestoneDetail: React.FC<DetailProps> = ({
                 {milestone.esfuerzoNivel}
               </span>
             </div>
-            <p className="text-[10px] text-ax-dark-fg-3 mt-1 truncate">
+            <p className="text-[11px] text-ax-dark-fg-2 mt-1 leading-relaxed">
               {milestone.esfuerzo}
             </p>
           </div>
@@ -149,8 +149,8 @@ export const MilestoneDetail: React.FC<DetailProps> = ({
             <span className="text-xs font-bold text-[#FFFFFF] block">
               {milestone.fase}
             </span>
-            <p className="text-[10px] text-ax-dark-fg-3 mt-1 truncate">
-              Equipo: {milestone.equipo.split('(')[0]}
+            <p className="text-[11px] text-ax-dark-fg-2 mt-1 leading-relaxed">
+              <strong>Equipo:</strong> {milestone.equipo}
             </p>
           </div>
         </div>
